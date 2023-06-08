@@ -18,18 +18,18 @@ npm run client:dev
 
 1. 构建过程中，报 `cannot read property 'styles' of undefined`
 
-问题原因：vue-loader使用需要配置 vue-loader-plugin
+  问题原因：vue-loader使用需要配置 vue-loader-plugin
 
-解决办法：webpakc.config.js 配置 vue-loader-plugin
-```js
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
+  解决办法：webpakc.config.js 配置 vue-loader-plugin
+  ```js
+  const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
-plugins: [
-  // ...
-  new VueLoaderPlugin()
-]
-```
+  plugins: [
+    // ...
+    new VueLoaderPlugin()
+  ]
+  ```
 
 2. 构建过程中，报 `cannot find module 'vue-loader/lib/plugin'`
 
-问题原因：vue-loaderb 版本过高，降至 `^15.0.7`即可。
+  问题原因：vue-loaderb 版本过高，降至 `^15.0.7`即可。
