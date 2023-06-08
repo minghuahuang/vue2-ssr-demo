@@ -9,9 +9,14 @@
 npm install
 ```
 
-客户端启动
+项目构建
 ```shell
-npm run client:dev
+npm run run:all
+```
+
+启动服务
+```shell
+node ./server/server.js
 ```
 
 ## 项目中的问题：
