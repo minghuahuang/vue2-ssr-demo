@@ -1,5 +1,8 @@
 <template>
-	<div @click="handleClick">Bar</div>
+	<div>
+		<div @click="handleClick">Bar</div>
+		<div>{{ $store.state.name }}</div>
+	</div>
 </template>
 
 <script>
@@ -8,6 +11,9 @@
 			handleClick() {
 				console.log("bar");
 			},
+		},
+		asyncData(store) {
+			return store.dispatch('changeName', 'hua')
 		},
 	};
 </script>

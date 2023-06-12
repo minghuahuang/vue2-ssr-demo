@@ -33,7 +33,7 @@ router.get('/', async (ctx) => {
 router.get('/(.*)', async (ctx) => {
   // 任意路径，重定向至首页，浏览器会自动按照路径匹配，会自动匹配到前端路由
   ctx.body = await new Promise((resolve, reject) => {
-    render.renderToString({ url: ctx.url },(err, html) => {
+    render.renderToString(ctx, (err, html) => {
       if(err && err.code == 404) resolve('not found')
       resolve(html)
     })
